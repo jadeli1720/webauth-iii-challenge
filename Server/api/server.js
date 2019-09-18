@@ -4,7 +4,7 @@ const cors = require('cors');
 
 //Routers ---> auth and users/departments
 const authRouter = require('../auth/auth-router')
-// const departRouter = require('')
+const userRouter = require('../users/user-router.js')
 
 //Set server to use express
 const server = express();
@@ -16,7 +16,7 @@ server.use(express.json());
 
 //Tell server to use these paths
 server.use('/api/auth', authRouter);
-// server.use('/api/depart', departRouter);
+server.use('/api/users', userRouter);
 
 //make sure it's working so far:
 server.get('/', (req, res) => {
