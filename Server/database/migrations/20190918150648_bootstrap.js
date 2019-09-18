@@ -17,7 +17,7 @@ exports.up = function(knex) {
     
       //department>string>used to group users
       users
-        .string('depatment', 128)
+        .string('department', 128)
         .unique()
   })
 };

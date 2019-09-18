@@ -35,5 +35,5 @@ function add(user) {
 //Used for Login ---> Find user by argument 
 function findBy(filter) {
     return db('users')
-            .where(filter)
+            .where(filter);
 }
