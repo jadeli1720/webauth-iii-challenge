@@ -1,4 +1,7 @@
-const server = require('./api/server');
+require('dotenv').config();
 
-const PORT = process.env.PORT || 4400;
-server.listen(PORT, () => console.log(`\n** Running on port ${PORT} **\n`))
+const server = require('./api/server');
+const defaults = require('./config/defualt')
+
+const port = defaults.port 
+server.listen(port, () => console.log(`\n** Running on port ${port} **\n`))
